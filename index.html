@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Corazón 3D - Feliz Mesario</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__header">
+        <p class="page__subtitle">feliz mesario</p>
+        <h1 class="page__title">Regalo de amor</h1>
+      </header>
+
+      <section class="heart-stage" aria-label="Corazón 3D interactivo">
+        <div class="heart-glow"></div>
+        <svg
+          class="heart"
+          viewBox="0 0 512 512"
+          role="img"
+          aria-label="Corazón con partes seleccionables"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <linearGradient id="heart-base" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff93b3" />
+              <stop offset="50%" stop-color="#ff4f87" />
+              <stop offset="100%" stop-color="#d4005d" />
+            </linearGradient>
+            <linearGradient id="heart-shadow" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff9cc5" />
+              <stop offset="100%" stop-color="#b0004b" />
+            </linearGradient>
+          </defs>
+          <path
+            class="heart-base"
+            d="M462.3 62.6c-54.5-46.4-136-38.3-186.4 13.7L256 96.7l-19.9-20.4C185.7 24.3 104.2 16.2 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.2l193.5 199.8c12 12.4 28.3 19.4 45.7 19.4s33.7-6.9 45.7-19.4l193.5-199.8c56.2-57.4 52.9-153.6-9.9-207.2z"
+          />
+
+          <path
+            class="heart-part heart-part--top-left"
+            d="M112 120 C120 70 190 40 250 110 C235 150 200 175 165 185 C135 170 115 150 112 120 Z"
+            data-message="Eres mi calma y mi alegría, gracias por cuidar de mí cada día."
+            tabindex="0"
+            role="button"
+            aria-label="Parte superior izquierda"
+          />
+          <path
+            class="heart-part heart-part--top-right"
+            d="M400 120 C392 70 322 40 262 110 C277 150 312 175 347 185 C377 170 397 150 400 120 Z"
+            data-message="Tu amor late conmigo, eres mi lugar favorito."
+            tabindex="0"
+            role="button"
+            aria-label="Parte superior derecha"
+          />
+          <path
+            class="heart-part heart-part--center"
+            d="M170 210 C210 190 300 190 342 210 C352 260 320 305 256 330 C192 305 160 260 170 210 Z"
+            data-message="Contigo todo es posible, mi corazón es tuyo."
+            tabindex="0"
+            role="button"
+            aria-label="Parte central"
+          />
+          <path
+            class="heart-part heart-part--bottom-left"
+            d="M150 240 C130 285 150 350 210 390 C215 330 230 280 255 250 C225 230 180 230 150 240 Z"
+            data-message="Cada latido me recuerda lo mucho que te amo."
+            tabindex="0"
+            role="button"
+            aria-label="Parte inferior izquierda"
+          />
+          <path
+            class="heart-part heart-part--bottom-right"
+            d="M362 240 C382 285 362 350 302 390 C297 330 282 280 257 250 C287 230 332 230 362 240 Z"
+            data-message="Gracias por ser mi inspiración y mi hogar."
+            tabindex="0"
+            role="button"
+            aria-label="Parte inferior derecha"
+          />
+
+          <text x="256" y="275" text-anchor="middle" class="heart-letter">G</text>
+        </svg>
+      </section>
+
+      <section class="message" aria-live="polite">
+        <h2 class="message__title">Mensajes del corazón</h2>
+        <p class="message__text">
+          Toca una parte del corazón para descubrir un mensaje de amor.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
